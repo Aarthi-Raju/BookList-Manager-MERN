@@ -1,0 +1,645 @@
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.885);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    #title_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 50px;
+            width: 150px;
+        }
+
+        #nav_title * {
+            font-weight: bold;
+            color: white;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        #hr {
+            width: 150px;
+            height: 1px;
+            border-radius: 50px;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgba(196, 0, 0, 0.837), rgba(196, 0, 0, 0.195));
+        }
+    }
+
+    #user {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        #login {
+            padding: 8px 20px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            border: 2px white solid;
+            border-radius: 50px;
+        }
+
+        #profile_img {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        #offcanvasWithBothOptions {
+            width: 300px;
+            border-radius: 3px;
+            border: 2px rgba(128, 128, 128, 0.678) solid;
+
+            .offcanvas-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px rgba(128, 128, 128, 0.227) solid;
+                background: rgba(255, 0, 0, 0.144);
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+
+                #profile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                #update_profile {
+                    font-size: 10px;
+                    border: none;
+                    background-color: rgba(128, 128, 128, 0.215);
+                    padding: 5px 10px;
+                    border: 1px rgba(128, 128, 128, 0.322) solid;
+                    border-radius: 5px;
+                }
+            }
+
+            .offcanvas-body {
+                .table {
+                    margin-top: -5px;
+
+                    td {
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#home {
+    background: linear-gradient(rgba(255, 166, 0, 0.262), rgba(255, 166, 0, 0.262)), url("./images/HomeBG.jpg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 150px 50px 50px 50px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 50px;
+
+    #homeLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 30px;
+
+        #homeTitle {
+            font-size: 40px;
+            width: 600px;
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            color: white;
+            background: orangered;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            border-radius: 2px 3px 5px grey solid;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background-color: black;
+        box-shadow: 2px 3px 5px grey solid;
+        padding: 60px 50px;
+        border-radius: 15px;
+
+        #formTitle {
+            font-size: 35px;
+            text-decoration: underline;
+        }
+
+        #formInps {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            input {
+                font-size: 17px;
+                padding: 8px 15px;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                width: 280px;
+            }
+        }
+
+        #formButtons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            button {
+                border: none;
+                padding: 10px 25px;
+                font-size: 16px;
+                background: rgba(243, 177, 54, 0.981);
+                color: white;
+                font-weight: bold;
+                border-radius: 50px;
+            }
+
+            button:hover {
+                background: rgba(255, 166, 0, 0.981);
+                color: white;
+            }
+        }
+    }
+}
+
+
+
+#bookList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 50px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+
+    #bookListImg {
+        width: 700px;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    #backAndTable {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+        padding-top: 30px;
+        margin-right: 50px;
+        gap: 30px;
+        width: 800px;
+
+        #pageTitle {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #backAndAdd {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            #backIcon {
+                font-size: 30px;
+            }
+
+            button {
+                background-color: orangered;
+                color: white;
+                border: none;
+                padding: 6px 25px;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: rgb(245, 88, 31);
+            }
+        }
+
+
+
+        table {
+            margin: 10px 0px;
+            border: 2px grey solid;
+
+            #dataIcons {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+
+                * {
+                    font-size: 15px;
+                    padding-left: 5px;
+                }
+            }
+
+            thead * {
+                background-color: rgb(83, 83, 83);
+                color: white;
+            }
+
+            tr {
+                .title {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+#CreatePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* height: 100%; */
+
+    #CreatePageImg {
+        width: 100vw;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #CreatePageBackAndForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0px 30px;
+
+        #CreatePageTitle {
+            font-size: 30px;
+            /* font-weight: bold; */
+            color: orangered;
+        }
+
+        #CreatePageBackAndAdd {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+
+            #backIcon {
+                width: 30px;
+                height: 30px;
+            }
+
+            button {
+                background-color: orangered;
+                color: white;
+                border: none;
+                padding: 6px 25px;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+        }
+
+
+        #CreatePageForm{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+            column-gap: 25px;
+            input{
+                width: 300px;
+                padding: 5px 10px;
+                font-size: 15px;
+            }
+            .CreatePageFormLabel{
+                font-size: 18px;
+            }
+        }
+
+        #CreatePageSubmit{
+            background-color: rgb(254, 106, 52);
+            border: none;
+            color: white;
+            padding: 8px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            box-shadow: 3px 3px 15px black solid;
+        }
+        #CreatePageSubmit:hover{
+            background-color: orangered;
+        }
+
+    }
+
+}
+
+
+
+#ShowBookPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    #ShowBookImg {
+        width: 100vw;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #ShowBookButton{
+        border: none;
+        background-color: orangered;
+        color: white;
+        box-shadow: 0px 3px 5px rgba(128, 128, 128, 0.415);
+        font-size: 17px;
+        padding: 5px 15px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    #ShowBookDetails{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 50px;
+        #ShowBookCard{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            width: 90vw;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.579);
+            img{
+                height: 230px;
+                width: 200px;
+            }
+            #ShowBookCardInfo{
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 6px;
+
+                #ShowBookCardInfoTitle{
+                    color: red;
+                    font-size: 25px;
+                    font-weight:600;
+                    text-transform: uppercase;
+                }
+
+                #ShowBookCardID{
+                    color: rgb(186, 33, 6);
+                    font-size: 15px;
+                    span{
+                        color: black;
+                    }
+                }
+
+                #ShowBookCardAuthor{
+                    color: rgb(2, 112, 129);
+                    font-size: 17px;
+                    span{
+                        color: black;
+                    }
+                }
+                #ShowBookCardPublisher{
+                    color: rgb(4, 2, 129);
+                    font-size: 16px;
+                    span{
+                        color: black;
+                    }
+                }
+                #ShowBookCardCreated{
+                    color: rgb(6, 3, 0);
+                    font-size: 14px;
+                    font-weight: 600;
+                    span{
+                        color: black;
+                        font-weight: 100;
+                    }
+                }
+                #ShowBookCardEdited{
+                    color: rgb(0, 0, 0);
+                    font-size: 14px;
+                    font-weight: 600;
+                    span{
+                        color: black;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#EditPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* height: 100%; */
+
+    #EditPageImg {
+        width: 100vw;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #EditPageBackAndForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0px 30px;
+
+        #EditPageTitle {
+            font-size: 30px;
+            /* font-weight: bold; */
+            color: orangered;
+        }
+
+        #EditPageBackAndAdd {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+
+            #backIcon {
+                width: 30px;
+                height: 30px;
+            }
+
+            button {
+                background-color: orangered;
+                color: white;
+                border: none;
+                padding: 6px 25px;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+        }
+
+
+        #EditPageForm{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+            column-gap: 25px;
+            input{
+                width: 300px;
+                padding: 5px 10px;
+                font-size: 15px;
+            }
+            .EditPageFormLabel{
+                font-size: 18px;
+            }
+        }
+
+        #EditPageSubmit{
+            background-color: rgb(254, 106, 52);
+            border: none;
+            color: white;
+            padding: 8px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            box-shadow: 3px 3px 15px black solid;
+        }
+        #EditPageSubmit:hover{
+            background-color: orangered;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+#deletePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    #deletePagePara{
+        font-size: 35px;
+        font-weight: 600;
+        color: red;
+    }
+    #deletePageDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        *{
+            font-size: 18px;
+        }
+    }
+    #deletePageButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        #yesButton{
+            background-color: rgb(252, 48, 48);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.668) ;
+        }
+        #yesButton:hover{
+            background-color: red;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.797) 
+        }
+        #noButton{
+            background-color: rgb(2, 163, 2);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.668) ;
+        }
+        #noButton:hover{
+            background-color: green;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.797) 
+        }
+    }
+}
+
